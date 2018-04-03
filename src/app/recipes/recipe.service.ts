@@ -30,6 +30,11 @@ export class RecipeService {
         return this.recipes.slice();
     }
 
+    setRecipes(recipes: Recipe[]) {
+      this.recipes = recipes;
+      this.recipesChanged.next(this.recipes.slice());
+  }
+
     getMaxId(): number {
       let maxId = 0;
             for (const recipe of this.recipes) {

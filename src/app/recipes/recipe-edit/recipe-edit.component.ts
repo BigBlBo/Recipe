@@ -83,7 +83,7 @@ console.log(newRecipe);
     this.router.navigate(['../'], {relativeTo: this.route});
   }
 
-  onDeleteIngredient(index: number){
+  onDeleteIngredient(index: number) {
     console.log(index);
     console.log(this.recipeForm.value['ingredients']);
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
